@@ -21,11 +21,8 @@
             <!-- Access Key -->
             <input type="hidden" name="access_key" value="56a9509f-7b30-46e7-a000-86dd6bc0daed">
             
-            <!-- Yönlendirmeyi iptal etmek için (opsiyoneldir, kaldırırsanız varsayılan sayfaya gitmez) -->
+            <!-- Yönlendirmeyi iptal etmek için -->
             <input type="hidden" name="redirect" value="https://web3forms.com/success"> 
-            <!-- NOT: Eğer redirect inputunu komple silerseniz, 
-                 Web3Forms kendi teşekkür sayfasını açar. 
-                 Sayfada kalmak için AJAX (JavaScript) kullanmak gerekir. -->
 
             <p>
                 <label for="isim">Adınız:</label><br>
@@ -33,7 +30,10 @@
             </p>
             <p>
                 <label for="email">E-posta Adresiniz:</label><br>
-                <input type="email" id="email" name="email" required>
+                <!-- aria-describedby ile uyarıyı inputa bağladık, NVDA artık tab ile gelince okuyacaktır -->
+                <input type="email" id="email" name="email" required aria-describedby="email-uyari">
+                <br>
+                <small id="email-uyari" style="color: #666;">Uyarı: Lütfen geçerli bir e-posta kullanın çünkü sizinle iletişime geçeceğiz.</small>
             </p>
             <p>
                 <label for="mesaj">Mesajınız:</label><br>
