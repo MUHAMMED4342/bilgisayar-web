@@ -2,35 +2,107 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Programlar ve Yazılımlar</title>
+    <meta name="description" content="Kara Borsa Oyunu, Youtube İndirici Pro ve NVDA eklentileri gibi ücretsiz programların indirileceği site.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-        </ul>
-    </nav>
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
 
-    <main>
-        <h1>Siteye Hoş Geldiniz</h1>
-        <p>Bu sitede geliştirdiğimiz programları bulacaksınız. Her türden program ve NVDA eklentisi görebilirsiniz.</p>
+    <header class="site-header">
+        <div class="brand">
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+                <rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="#5FBFA9" stroke-width="2"/>
+                <path d="M8 24 L13 14 L17 27 L21 10 L25 30 L28 18 L32 22" fill="none" stroke="#5FBFA9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="brand-text">
+                <p class="brand-title" style="font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:clamp(1.7rem,4vw,2.4rem); color:#fff; text-transform:uppercase; margin:0;">Programlar Sitesi</p>
+                <p>Yazılımlar ve NVDA eklentileri</p>
+            </div>
+        </div>
+        <nav class="site-nav" aria-label="Ana gezinme">
+            <ul>
+                <li><a href="index.html" aria-current="page">Ana Sayfa</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <section>
-            <h2>Kara Borsa Oyunu</h2>
-            <p><strong>Açıklama:</strong> Kara borsa oyunu; karanlık maddeler alım satımıyla zenginleşmeye çalıştığınız bir ticaret oyunudur.</p>
-            <p><strong>Geliştiriciler:</strong> Muhammed Ali ve Emir Yakup</p>
-            <p><a href="https://github.com/MUHAMMED4342/kara_borsa_oyun/releases/latest/download/KaraborsaSimulasyonu.exe">Kara Borsa Oyununu İndir</a></p>
+    <main id="icerik">
+        <div class="intro">
+            <h1>Siteye Hoş Geldiniz</h1>
+            <p>Bu sitede geliştirdiğimiz programları bulacaksınız. Her türden program ve NVDA eklentisi burada, açıklamalarıyla birlikte listelenir.</p>
+        </div>
+
+        <svg class="wave-divider" viewBox="0 0 960 28" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0 14 Q 20 2, 40 14 T 80 14 T 120 14 T 160 14 T 200 14 T 240 14 T 280 14 T 320 14 T 360 14 T 400 14 T 440 14 T 480 14 T 520 14 T 560 14 T 600 14 T 640 14 T 680 14 T 720 14 T 760 14 T 800 14 T 840 14 T 880 14 T 920 14 T 960 14"
+                  fill="none" stroke="var(--wave-line)" stroke-width="2"/>
+        </svg>
+
+        <section class="category" aria-labelledby="programlar-baslik">
+            <h2 id="programlar-baslik">Programlar</h2>
+            <div class="card-grid">
+
+                <article class="card">
+                    <h3>Kara Borsa Oyunu</h3>
+                    <p><strong>Açıklama:</strong> Kara borsa oyunu; karanlık maddeler alım satımıyla zenginleşmeye çalıştığınız bir ticaret oyunudur.</p>
+                    <p><strong>Geliştiriciler:</strong> Muhammed Ali ve Emir Yakup</p>
+                    <a class="download-link" href="https://github.com/MUHAMMED4342/kara_borsa_oyun/releases/latest/download/KaraborsaSimulasyonu.exe">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v9m0 0 3-3m-3 3-3-3M2 13h12" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Kara Borsa Oyununu İndir
+                        <span class="file-type">(.exe)</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>Youtube İndirici Pro</h3>
+                    <p><strong>Açıklama:</strong> Reklam yok, deneme sürümü yok, takipçiler yok, açık kaynaklı youtube indirici pro youtube sitesinden videoları indiren bir programdır fakat başka video paylaşım sitelerinden de indirme yapabilmektedir.</p>
+                    <p><strong>Geliştirici:</strong> muhammed.ali</p>
+                    <a class="download-link" href="https://github.com/MUHAMMED4342/youtube_indirici_pro/releases/latest/download/youtube_indirici_pro.setup.exe">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v9m0 0 3-3m-3 3-3-3M2 13h12" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Youtube İndirici Pro'yu İndir
+                        <span class="file-type">(.exe)</span>
+                    </a>
+                </article>
+
+            </div>
         </section>
 
-        <section>
-            <h2>Youtube İndirici Pro</h2>
-            <p><strong>Açıklama:</strong> Reklam yok, deneme sürümü yok, takipçiler yok, açık kaynaklı youtube indirici pro youtube sitesinden videoları indiren bir programdır fakat başka video paylaşım sitelerindende indirme yapabilmektedir.</p>
-            <p><strong>Geliştirici:</strong> muhammed.ali</p>
-            <p><a href="https://github.com/MUHAMMED4342/youtube_indirici_pro/releases/latest">Dosyayı İndir</a></p>
+        <section class="category" aria-labelledby="eklentiler-baslik">
+            <h2 id="eklentiler-baslik">NVDA Eklentileri</h2>
+            <div class="card-grid">
+
+                <article class="card">
+                    <h3>Hızlı Metin Çevirici <span class="badge">NVDA eklentisi</span></h3>
+                    <p><strong>Açıklama:</strong> Odakta bir yazı alanı var ise metinleri NVDA tuşu artı sıfır kombinasyonu ile İngilizceye çevirir ve odaktaki yazı alanına Türkçe şekilde yazar.</p>
+                    <p><strong>Geliştirici:</strong> muhammed.ali</p>
+                    <a class="download-link" href="https://github.com/MUHAMMED4342/NVDA_eklentileri/raw/refs/heads/main/hizli_ceviri.nvda-addon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v9m0 0 3-3m-3 3-3-3M2 13h12" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Hızlı Metin Çeviriciyi İndir
+                        <span class="file-type">(.nvda-addon)</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>Konuşma Geçmişi <span class="badge">NVDA eklentisi</span></h3>
+                    <p><strong>Açıklama:</strong> NVDA tarafından seslendirilen son konuşmaları hafızada tutarak kısayollar ile geçmişe göz atmanızı ve kopyalamanızı sağlar.</p>
+                    <p><strong>Geliştirici:</strong> muhammed.ali</p>
+                    <a class="download-link" href="https://github.com/MUHAMMED4342/NVDA_eklentileri/raw/refs/heads/main/konusma_gecmisi.nvda-addon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v9m0 0 3-3m-3 3-3-3M2 13h12" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Konuşma Geçmişini İndir
+                        <span class="file-type">(.nvda-addon)</span>
+                    </a>
+                </article>
+
+            </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <p>Sorularınız için <a href="iletisim.html">iletişim sayfamıza</a> göz atabilirsiniz.</p>
+    </footer>
 
 </body>
 </html>
