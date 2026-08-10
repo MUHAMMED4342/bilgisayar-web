@@ -261,6 +261,65 @@ section.category{
 
 .download-link svg{ flex: none; }
 
+/* ---------- Sürüm rozeti ---------- */
+.version{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.22em 0.6em;
+  border-radius: 5px;
+}
+
+/* ---------- Kaynak kodu / rapor buton grubu ---------- */
+.link-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.secondary-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  align-self: flex-start;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.55em 1.05em;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  border: 1.5px solid var(--card-border);
+}
+
+.secondary-link:hover,
+.secondary-link:focus-visible{
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.secondary-link svg{ flex: none; }
+
+.section-note{
+  color: var(--ink-soft);
+  max-width: 68ch;
+  margin: -0.5rem 0 1.4rem;
+  font-size: 0.96rem;
+}
+
+kbd{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+  padding: 0.1em 0.45em;
+}
+
 /* ---------- Form (iletişim sayfası) ---------- */
 .contact-form{
   max-width: 44rem;
