@@ -73,8 +73,20 @@
     </main>
 
     <footer>
+        <p>Bu siteyi ziyaret eden <span id="visitor-count" aria-live="polite">yükleniyor...</span>. kişisiniz.</p>
         <p>Sorularınız veya karşılaştığınız bir sorun için <a href="iletisim.html">iletişim sayfamıza</a> göz atabilirsiniz.</p>
     </footer>
+
+    <script>
+      fetch('https://api.countapi.xyz/hit/bilgisayar-xi.vercel.app/visits')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('visitor-count').innerText = data.value;
+        })
+        .catch(() => {
+          document.getElementById('visitor-count').innerText = "sayı alınamadı";
+        });
+    </script>
 
 </body>
 </html>
