@@ -4,12 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Programlar Sitesi</title>
+    <style>
+        .bulten-bolumu {
+            margin: 2rem 0;
+            padding: 1.75rem;
+            border: 1px solid #d7dbe0;
+            border-radius: 12px;
+            background: #f6f8fb;
+        }
+        .bulten-bolumu h2 {
+            margin-top: 0;
+        }
+        .bulten-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .bulten-form .alan-grubu {
+            flex: 1 1 260px;
+            display: flex;
+            flex-direction: column;
+        }
+        .bulten-form label {
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+        .bulten-form input[type="email"] {
+            padding: 0.6rem 0.75rem;
+            border: 1px solid #b9c0ca;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .bulten-form input[type="submit"] {
+            align-self: flex-end;
+            padding: 0.65rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            background: #2b6cb0;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .bulten-form input[type="submit"]:hover {
+            background: #234e8a;
+        }
+        .bulten-not {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: #5b6470;
+        }
+        .bulten-not a {
+            color: #5b6470;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>Programlar Sitesi</h1>
-        <p>Ücretsiz yazılımlar ve NVDA eklentileri</p>
+        <p>Sizin için hazırladığımız ücretsiz yazılımlar ve NVDA eklentileri</p>
         <nav aria-label="Ana gezinme">
             <ul>
                 <li><a href="index.html" aria-current="page">Ana Sayfa</a></li>
@@ -19,8 +74,8 @@
     </header>
 
     <main>
-        <h2>Siteye Hoş Geldiniz</h2>
-        <p>Bu sitede geliştirdiğimiz ücretsiz programları bulabilirsiniz. Her programın altında iki link yer alır: dosyayı indirmek için "Programı İndir" ve kaynak kodunu incelemek için "Kaynak Kodu (GitHub)". Kaynak kodu açık olduğu için dosyaları isterseniz kendiniz de derleyebilirsiniz.</p>
+        <h2>Hoş Geldiniz!</h2>
+        <p>Burada sizin için geliştirdiğimiz ücretsiz programları bulabilirsiniz. Her programın altında iki link var: dosyayı indirmek için "Programı İndir" ve kaynak kodunu incelemek isterseniz "Kaynak Kodu (GitHub)". Kodlar açık kaynak, dilerseniz dosyaları kendiniz de derleyebilirsiniz.</p>
 
         <section aria-labelledby="programlar-baslik">
             <h2 id="programlar-baslik">Programlar</h2>
@@ -48,7 +103,7 @@
 
         <section aria-labelledby="eklentiler-baslik">
             <h2 id="eklentiler-baslik">NVDA Eklentileri</h2>
-            <p>NVDA, görme engelli kullanıcılar için geliştirilmiş ücretsiz bir ekran okuyucu programıdır. Aşağıdaki eklentiler NVDA'nın işlevlerini genişletir.</p>
+            <p>NVDA, görme engelli kullanıcılar için geliştirilmiş ücretsiz bir ekran okuyucu programı. Aşağıdaki eklentilerle işlevlerini biraz daha genişletmeye çalıştık.</p>
 
             <article>
                 <h3>Hızlı Metin Çevirici, NVDA eklentisi</h3>
@@ -70,11 +125,30 @@
                 </ul>
             </article>
         </section>
+
+        <section class="bulten-bolumu" aria-labelledby="bulten-baslik">
+            <h2 id="bulten-baslik">Yeni Programlardan Haberdar Olun</h2>
+            <p>E-posta adresinizi bırakın, yeni bir program veya eklenti çıktığında size ilk biz haber verelim.</p>
+            <form
+              action="https://buttondown.com/api/emails/embed-subscribe/bilgisayar.netlify.app"
+              method="post"
+              class="bulten-form embeddable-buttondown-form"
+            >
+              <div class="alan-grubu">
+                <label for="bd-email">E-posta adresiniz</label>
+                <input type="email" name="email" id="bd-email" placeholder="ornek@eposta.com" required />
+              </div>
+              <input type="submit" value="Abone Ol" />
+            </form>
+            <p class="bulten-not">
+              Bu bülteni ücretsiz olarak bize sunduğu için <a href="https://buttondown.com/refer/bilgisayar.netlify.app" target="_blank" rel="noopener noreferrer">Buttondown</a>'a teşekkür ederiz.
+            </p>
+        </section>
     </main>
 
     <footer>
-        <p>Bu siteyi ziyaret eden <span id="visitor-count" aria-live="polite">yükleniyor...</span>. kişisiniz.</p>
-        <p>Sorularınız veya karşılaştığınız bir sorun için <a href="iletisim.html">iletişim sayfamıza</a> göz atabilirsiniz.</p>
+        <p>Şimdiye kadar <span id="visitor-count" aria-live="polite">yükleniyor...</span> kişi bu siteyi ziyaret etti, aralarında siz de varsınız artık.</p>
+        <p>Bir sorunuz olursa ya da bir şey ters giderse <a href="iletisim.html">iletişim sayfamıza</a> uğrayabilirsiniz.</p>
     </footer>
 
     <script>
