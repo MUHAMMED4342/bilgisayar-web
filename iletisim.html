@@ -22,11 +22,14 @@
         <h2>İletişim</h2>
         <p>Bir sorunuz mu var ya da programlarımızla ilgili bir sorunla mı karşılaştınız? Aşağıdaki formu doldurarak bize ulaşabilirsiniz, en kısa sürede size dönüş yapmaya çalışırız.</p>
 
-        <form action="https://formsubmit.co/muhammedalicicek734@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://bilgisayar-xi.vercel.app/tesekkur.html">
-            <input type="hidden" name="_cc" value="emiryakup41@icloud.com">
-            <input type="hidden" name="_url" value="https://bilgisayar-xi.vercel.app/iletisim.html">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- web3forms.com üzerinden aldığınız access key ile değiştirin -->
+            <input type="hidden" name="access_key" value="56a9509f-7b30-46e7-a000-86dd6bc0daed">
+            <input type="hidden" name="redirect" value="https://bilgisayar-xi.vercel.app/tesekkur.html">
+            <input type="hidden" name="subject" value="Programlar Sitesi - Yeni İletişim Mesajı">
+
+            <!-- Spam koruması: görme engelli kullanıcıları etkilemeyen gizli bir kontrol alanı -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
             <p>
                 <label for="isim">Adınız:</label><br>
