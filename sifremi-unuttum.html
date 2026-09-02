@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bu sayfa bilerek hiçbir menüye/gezinmeye eklenmedi: sadece oyunun
+         giriş ekranındaki "Şifremi Unuttum" butonundan açılan bir bağlantı.
+         Arama motorlarında da görünmesini istemiyorsanız aşağıdaki
+         "robots" satırını olduğu gibi bırakın. -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Şifremi Unuttum - Programlar Sitesi</title>
+</head>
+<body>
+
+    <header>
+        <h1>Programlar Sitesi</h1>
+        <p>Ücretsiz yazılımlar ve NVDA eklentileri</p>
+    </header>
+
+    <main>
+        <h2>Şifremi Unuttum</h2>
+        <p>
+            Karaborsa oyunundaki hesabınızın şifresini mi unuttunuz? Aşağıdaki
+            forma sadece <strong>kullanıcı adınızı</strong> yazıp gönderin.
+            Mesajınızı inceleyip hesabınıza yeni bir şifre atayacağız.
+        </p>
+
+        <p>
+            <strong>Bu formu göndermek şifrenizi ANINDA sıfırlamaz</strong> -
+            talebiniz elle incelenip yeni şifreniz tarafımızca belirlenir. Yeni
+            şifrenizi size bildirdiğimizde (e-posta ile), oyuna o şifreyle
+            giriş yaptıktan hemen sonra, Ana Menü içindeki
+            <strong>"Şifre Değiştir"</strong> seçeneğini kullanarak şifrenizi
+            mutlaka kendi belirleyeceğiniz yeni bir şifreyle değiştirin.
+        </p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- web3forms.com üzerinden aldığınız access key ile değiştirin -->
+            <input type="hidden" name="access_key" value="56a9509f-7b30-46e7-a000-86dd6bc0daed">
+            <input type="hidden" name="redirect" value="https://bilgisayar-xi.vercel.app/sifre-sifirlama-tesekkur.html">
+            <input type="hidden" name="subject" value="Programlar Sitesi - Şifre Sıfırlama Talebi">
+
+            <!-- Spam koruması: görme engelli kullanıcıları etkilemeyen gizli bir kontrol alanı -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+            <p>
+                <label for="kullanici_adi">Oyundaki kullanıcı adınız:</label><br>
+                <input type="text" id="kullanici_adi" name="name" required autocomplete="username">
+            </p>
+
+            <p>
+                <label for="email">E-posta (size dönüş yapabilmemiz için):</label><br>
+                <input type="email" id="email" name="email" required autocomplete="email">
+            </p>
+
+            <details>
+                <summary>Neden e-postanızı istiyoruz?</summary>
+                <p>Yeni şifrenizi size bildirebilmek için bir e-posta adresine ihtiyacımız var. E-posta adresiniz hiçbir şekilde üçüncü taraflarla paylaşılmaz ve yalnızca bu talep kapsamında kullanılır.</p>
+            </details>
+
+            <p>
+                <label for="mesaj">Eklemek istediğiniz bir not (isteğe bağlı):</label><br>
+                <textarea id="mesaj" name="message" rows="3"></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Şifre Sıfırlama Talebi Gönder</button>
+            </p>
+        </form>
+
+        <p>
+            <strong>Talebiniz 1 gün (24 saat) içinde sonuçlanmazsa</strong>,
+            lütfen doğrudan
+            <a href="mailto:muhammedalicicek734@gmail.com">muhammedalicicek734@gmail.com</a>
+            adresine yazın.
+        </p>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Ana sayfaya</a> dönmek için tıklayabilirsiniz.</p>
+    </footer>
+
+</body>
+</html>
